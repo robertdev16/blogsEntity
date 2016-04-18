@@ -34,6 +34,9 @@ public class Article implements Serializable {
 	private String subject;
 	
 	@Column(nullable=false)
+	private String subtilte;
+	
+	@Column(nullable=false)
 	private String content;
 	
 	@Lob
@@ -57,16 +60,16 @@ public class Article implements Serializable {
 	public Article() {
 	}
 
-	public Article(String subject, String content, Date publishDate, User publishedBy, Category category) {
+	
+	public Article(String subject, String subtilte, String content, byte[] image) {
 		super();
 		this.subject = subject;
+		this.subtilte = subtilte;
 		this.content = content;
-		this.publishDate = publishDate;
-		this.publishedBy = publishedBy;
-		this.category = category;
+		this.image = image;
+		this.publishDate = new Date();
 	}
 
-	
 	public Integer getId() {
 		return id;
 	}
@@ -83,6 +86,14 @@ public class Article implements Serializable {
 		this.subject = subject;
 	}
 	
+	public String getSubtilte() {
+		return subtilte;
+	}
+
+	public void setSubtilte(String subtilte) {
+		this.subtilte = subtilte;
+	}
+
 	public String getContent() {
 		return content;
 	}

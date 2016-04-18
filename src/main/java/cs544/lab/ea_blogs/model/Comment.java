@@ -45,10 +45,10 @@ public class Comment implements Serializable {
 	public Comment() {
 	}
 
-	public Comment(String content, Date postDate, User postedBy, Article article) {
+	public Comment(String content, User postedBy, Article article) {
 		super();
 		this.content = content;
-		this.postDate = postDate;
+		this.postDate = new Date();
 		this.postedBy = postedBy;
 		this.article = article;
 	}
