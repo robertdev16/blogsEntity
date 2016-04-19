@@ -27,7 +27,7 @@ public class Comment implements Serializable {
 	@GeneratedValue(strategy = IDENTITY)
 	private Integer id;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "TEXT")
 	private String content;
 	
 	@Temporal(TemporalType.TIMESTAMP)

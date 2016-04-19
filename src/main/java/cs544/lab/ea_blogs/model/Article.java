@@ -36,7 +36,7 @@ public class Article implements Serializable {
 	@Column(nullable=false)
 	private String subtilte;
 	
-	@Column(nullable=false)
+	@Column(nullable=false, columnDefinition = "TEXT")
 	private String content;
 	
 	@Lob
